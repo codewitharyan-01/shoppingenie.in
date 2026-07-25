@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { motion } from "framer-motion"
+import { motion, Variants } from "framer-motion"
 import Link from "next/link"
 import {
   Search, Sparkles, Zap, ShieldCheck, ArrowRight,
@@ -13,11 +13,11 @@ import { Input } from "@/components/ui/input"
 import { DealCard } from "@/components/deals/deal-card"
 
 /* ─── Animation Variants ─── */
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
 }
-const stagger = {
+const stagger: Variants = {
   hidden: {},
   visible: { transition: { staggerChildren: 0.08 } },
 }
